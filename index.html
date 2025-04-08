@@ -341,7 +341,7 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
 
 .style-switcher {
     position: fixed;
-    right: 0;
+    right: 25px;
     top: 60px;
     padding: 15px;
     width: 200px;
@@ -350,7 +350,7 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
     z-index: 101;
     border-radius: 5px;
     transition: all .3s ease;
-    transform: translateX(100%);
+    transform: translateX(0%);
 }
     .style-switcher.open { transform: translateX(-25px); }
     .style-switcher .s-icon {
@@ -383,36 +383,6 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
 /* Create more 5 css files to enable Toggle style Switcher */
 
 
-
-File Name
-color-1
-:root {
-    --skin-color: #EC1839;
-}
-
-File Name
-color-2
-:root {
-    --skin-color: #F45B0F;
-}
-
-File Name
-color-3
-:root {
-    --skin-color: #37B182;
-}
-
-File Name 
-color-4
-:root {
-    --skin-color: #1854B4;
-}
-
-File Name
-color-5
-:root {
-    --skin-color: #F021B2;
-}
 
 </style>
 
@@ -881,25 +851,13 @@ color-5
         </div>
     </div>
 
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-
-        <h4>Theme Colors</h4>
-
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
+    <div class="style-switcher open">
+    <!-- Only keep the dark/light mode toggle -->
+    <div class="day-night s-icon">
+        <i class="fas fa-moon"></i> <!-- or fa-sun -->
     </div>
+</div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script src="app.js"></script>
