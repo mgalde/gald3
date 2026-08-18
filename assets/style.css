@@ -1,0 +1,223 @@
+/* Gald3 — dark family-legacy direction: black, oxblood red, deep navy */
+
+:root {
+  --bg: #0a0a0c;
+  --panel: #121319;
+  --panel-line: rgba(236, 231, 219, 0.1);
+  --ink: #ece7db;
+  --ink-soft: #a8a396;
+  --ink-faint: #726d61;
+  --red: #9c1c1c;
+  --red-soft: #c2483f;
+  --navy: #1c2c47;
+  --navy-soft: #2c4266;
+  --max: 40rem;
+  --wide: 56rem;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "EB Garamond", "Iowan Old Style", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration-color: var(--red-soft); text-underline-offset: 3px; }
+a:hover { color: var(--red-soft); }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+.wrap.wide { max-width: var(--wide); }
+
+/* Header / nav */
+
+header.site {
+  padding: 2.6rem 0 1.6rem;
+  border-bottom: 1px solid var(--panel-line);
+}
+
+.mark { display: flex; align-items: center; justify-content: center; gap: 0.9rem; text-decoration: none; }
+.mark:hover { color: var(--ink); }
+.mark svg { flex: none; }
+
+.wordmark {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+nav.primary { margin-top: 1.7rem; display: flex; justify-content: center; gap: 2.4rem; }
+
+nav.primary a {
+  font-family: "EB Garamond", Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+}
+nav.primary a[aria-current="page"],
+nav.primary a:hover { color: var(--ink); border-bottom-color: var(--red); }
+
+/* Hero */
+
+.hero {
+  padding: 5rem 0 4.5rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(28, 44, 71, 0.55), transparent 60%),
+    var(--bg);
+}
+
+.eyebrow {
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  color: var(--red-soft);
+  font-size: 1.02rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.lede {
+  text-align: center;
+  font-size: 1.24rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 32rem;
+  margin: 0 auto 2.6rem;
+}
+
+.rule {
+  width: 3.5rem;
+  height: 2px;
+  background: var(--red);
+  margin: 2.4rem auto;
+  border: none;
+}
+
+.center-copy { text-align: center; color: var(--ink-soft); max-width: 34rem; margin: 0 auto; }
+
+/* Story sections */
+
+main { padding: 0 0 5rem; }
+
+section.story-block {
+  padding: 4rem 0;
+  border-top: 1px solid var(--panel-line);
+}
+section.story-block:nth-of-type(even) { background: var(--panel); }
+
+.story-label {
+  font-variant: small-caps;
+  letter-spacing: 0.16em;
+  color: var(--red-soft);
+  font-size: 0.98rem;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+article h2, section.story-block h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  margin: 0 0 1.4rem;
+  color: var(--ink);
+  text-align: center;
+  text-wrap: balance;
+}
+
+article p, section.story-block p { margin: 0 0 1.3rem; color: var(--ink-soft); }
+section.story-block .wrap p:last-of-type { margin-bottom: 0; }
+
+.pull-quote {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--ink);
+  max-width: 34rem;
+  margin: 2.6rem auto 0;
+  line-height: 1.4;
+  border-left: 2px solid var(--red);
+  border-right: 2px solid var(--navy-soft);
+  padding: 0.2rem 1.6rem;
+}
+
+.cta-row { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.8rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.7rem;
+  border: 1px solid var(--red);
+  color: var(--ink);
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.09em;
+  font-size: 1.02rem;
+  border-radius: 1px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { background: var(--red); border-color: var(--red); color: var(--ink); }
+
+.btn.quiet { border-color: var(--panel-line); color: var(--ink-soft); }
+.btn.quiet:hover { background: var(--navy); border-color: var(--navy); color: var(--ink); }
+
+.contact-block { text-align: center; margin: 2.8rem 0; }
+.contact-block .label {
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  color: var(--red-soft);
+  font-size: 1.02rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.contact-block .value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--ink);
+}
+
+/* Footer */
+
+footer.site {
+  border-top: 1px solid var(--panel-line);
+  padding: 2.2rem 0 3rem;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+footer.site .fmark { opacity: 0.75; margin-bottom: 0.7rem; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.3rem; }
+  .wordmark { font-size: 1.3rem; }
+  nav.primary { gap: 1.5rem; }
+  section.story-block { padding: 3rem 0; }
+  article h2, section.story-block h2 { font-size: 1.6rem; }
+}
