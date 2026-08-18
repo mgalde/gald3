@@ -202,6 +202,53 @@ section.story-block .wrap p:last-of-type { margin-bottom: 0; }
   color: var(--ink);
 }
 
+/* Family list */
+
+.family-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.family-list li { text-align: center; }
+.family-list .name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+.family-list .desc { color: var(--ink-soft); margin-top: 0.25rem; }
+
+/* Timeline */
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 32rem;
+}
+.timeline li {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--panel-line);
+  text-align: left;
+}
+.timeline li:last-child { border-bottom: none; }
+.timeline .year {
+  flex: none;
+  width: 6rem;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  color: var(--red-soft);
+  font-size: 0.98rem;
+  padding-top: 0.15rem;
+}
+.timeline .desc { color: var(--ink-soft); }
+
 /* Footer */
 
 footer.site {
